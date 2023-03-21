@@ -1,0 +1,60 @@
+Step - 1: Data Collection
+--------------------------
+--> In this Project, We need to collect images of players. There are 4 ways of doing it.
+	-->Download images manually from chrome and then use them to train the model.
+	--> Use web scrapping code to automatically download images from chrome. link for article - https://towardsdatascience.com/image-scraping-with-python-a96feda8af2d
+	--> Use of FATKUN Chrome tool -- It's a chrome extension that we will be using.
+	--> Buy Images from 3rd party vendor
+
+--> Github link for google image scrapping code: https://github.com/codebasics/py/blob/master/DataScience/CelebrityFaceRecognition/google_image_scrapping/image_download.py
+	IMP NOTE - It may not work because google keep on changing code to prevent web scrapping
+
+
+Step-2: Data Cleaning
+-----------------------
+--> Most of the time is spent on data cleaning. 
+-->Requirements:
+	1) Eyes must be visible. If 2 eyes clearly visible then keep it else discard it.
+	2)Photos must be clear
+
+For FACE_DETECTION:
+-------------------
+->We will be using OPENCV - Opencv is famous image processing library in python
+-> For Detection, we will be using HAAR-CASCADE TECHNIQUE - Famous technique to detect eyes and face.
+->80% of data cleaning will be done by Automated code, while 20% data cleaning will  be done MANUALLY REJECTION -- means deleting unwanted images or images of other person in same photo.
+
+
+Step-3: Let's Begin Working on the Project Step by Step
+--------------------------------------------------------
+1) Put Images separately in one folder <Name wise>
+2) Download the Requirements inside 'model' folder. List of requirements is inside 'requirement.txt' file.
+3) Step to install requirements is - Open model folder -> open cmd prompt from here -> type- 'pip install -r requirements.txt' -> press enter
+4) Open jupyter notebook inside 'model' folder
+5)Import libraries
+6) Convery colorful image into greyscale image.
+7) Use HAAR CASCADE Method for face Detection -->Also read article on how it works...Very IMP for Interview.
+8) Code on How to use HAAR CASCADE Method--> You will get it on website itself
+9) You Have 'HAAR CASCADE Files/code' inside 'opencv' folder. They are pre-trained classifiers.
+10) Whatever processing we have done on image is there in jupyter notebook. Read the COMMENTS.
+11) Write code to get cropped images from original images and store in folder
+12) Delete unwanted images from cropped folder
+13) Now we will do WAVELENGTH TRANSFORMATION --> It is used to extract important features from image. It is the most effective way of extracting feature like eyes, forehead, lips, nose etc.
+14) We are creating vertical stack of Raw image and wavelength transformation image.
+15) we will be using SVM as a classification model. It is very effective in classification.
+16) We will train multiple models and will take the model which shows the best result.
+
+
+
+
+
+
+
+Important Questions Related to this Project:
+---------------------------------------------
+1) Why we are using greyscale image?
+2) What are other image processing libraries ang face detection technique.
+3) what are other feature extraction technique?- like wavelength transformation
+4)Resources to understand signal processing concepts:
+My friend Iman's youtube channel: https://www.youtube.com/channel/UCVka...
+Representing image as a frequency: https://www.youtube.com/watch?v=xrTor...
+Fourier transform: https://www.youtube.com/watch?v=spUNp...
